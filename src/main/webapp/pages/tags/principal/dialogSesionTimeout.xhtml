@@ -1,0 +1,41 @@
+<ui:composition xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:sec="http://www.springframework.org/security/tags"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+>
+
+
+			<h:form>
+			
+			        <p:idleMonitor timeout="300000" onidle="PF('timeoutdialog').show()" >
+			            <p:ajax event="idle" update="maintimeoutdialog"/>
+			        </p:idleMonitor>
+			    </h:form>
+				<p:dialog  position="center, center"
+						hideEffect="fade" showEffect="fade"  widgetVar="timeoutdialog"
+						modal="true"  width="600"	closable="false"					
+						>
+						<f:facet name="header">
+						<div class="titulo_seccion">${msg.exp_sesion_title}</div>
+						</f:facet>
+						<h:form id="maintimeoutdialog">
+								<p:growl id="growl" showDetail="true" severity="fatal"/>
+								<p:spacer height="20px"></p:spacer>
+								<div style="color:black; font-weight: bold; font-size: 12px;">${msg.exp_sesion_msg}</div>	
+								<p:spacer height="20px"></p:spacer>								
+									<p:panel>
+										<p:spacer></p:spacer>
+						 				<p:commandButton styleClass="boton"
+						 							icon="pi pi-sign-out"
+						 							onclick="cleanLocalStorage()"
+						 							actionListener="#{indexController.closeSesion}"
+													value="Aceptar"
+													oncomplete="location = '../../index.jsf';"
+													 />
+									</p:panel>									
+						</h:form>
+					</p:dialog>
+					
+					
+</ui:composition>

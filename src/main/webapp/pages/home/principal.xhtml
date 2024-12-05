@@ -1,0 +1,28 @@
+<ui:composition xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:sec="http://www.springframework.org/security/tags"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	template="../sections/template.xhtml">
+
+	<ui:define name="contenido">
+		<div class="row bg-title">
+			<div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+				<h4 class="page-title">Bienvenido</h4>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="white-box">
+					<div class="card">
+						              <video loop="true" autoplay="autoplay" controls="" muted="" style="width:100%">
+			                <source src="#{facesContext.externalContext.requestContextPath}/resources/css/plugins/images/intro.mp4" type="video/mp4"></source>
+			              </video>
+					</div>
+				</div>
+			</div>
+		</div>
+	</ui:define>
+
+
+</ui:composition>

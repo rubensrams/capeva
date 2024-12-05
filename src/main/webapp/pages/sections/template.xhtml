@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:custom="http://codirac/custom-tags"
+	>
+
+<h:head>
+	<f:facet name="first">
+		<meta content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/x-icon" href="#{facesContext.externalContext.requestContextPath}/resources/css/plugins/images/caratulas/favicon.ico"></link>
+		<title>${msg.application_tab_title}</title>
+	</f:facet>
+	<f:facet name="last">
+		
+		<link
+			href="#{facesContext.externalContext.requestContextPath}/resources/css/plugins/bootstrap-extension/css/bootstrap.min.css"
+			rel="stylesheet" media="screen" />
+		<link
+			href="#{facesContext.externalContext.requestContextPath}/resources/css/plugins/bootstrap-extension/css/bootstrap-extension.css"
+			rel="stylesheet" media="screen" />
+		<link
+			href="#{facesContext.externalContext.requestContextPath}/resources/css/plugins/navbar/sidebar-nav.min.css"
+			rel="stylesheet" media="screen" />
+		<link
+			href="#{facesContext.externalContext.requestContextPath}/resources/css/animate.css"
+			rel="stylesheet" media="screen" />
+		<link
+			href="#{facesContext.externalContext.requestContextPath}/resources/css/style.min.css"
+			rel="stylesheet" media="screen" />
+		<link
+			href="#{facesContext.externalContext.requestContextPath}/resources/css/colors/megna.css"
+			rel="stylesheet" media="screen" />
+
+		<link
+			href="#{facesContext.externalContext.requestContextPath}/resources/css/plugins/custom-select/custom-select.css"
+			rel="stylesheet" media="screen" />
+		<link
+			href="#{facesContext.externalContext.requestContextPath}/resources/css/primecss.css"
+			rel="stylesheet" media="screen" />
+
+	</f:facet>
+    <script>
+    	window.history.forward();
+
+  </script>
+
+</h:head>
+<h:body styleClass="fix-sidebar" onload="generaEstiloMenu()">
+	<f:view>
+	
+		<div id="wrapper">
+			<ui:include src="./cabecera.xhtml" />
+			<ui:include src="./menu.xhtml" />
+            <ui:include src="./status.xhtml" />
+			<div id="page-wrapper">
+				<div class="container-fluid">
+					<ui:insert name="contenido">
+						<div class="row bg-title">
+							<div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+								<h4 class="page-title">Starter Page</h4>
+							</div>
+							<div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+								<ol class="breadcrumb">
+									<li><a href="#">Dashboard</a></li>
+									<li class="active">Starter Page</li>
+								</ol>
+							</div>
+							<!-- /.col-lg-12 -->
+						</div>
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="white-box">
+									<h3 class="box-title m-b-0">Default Basic Forms</h3>
+
+								</div>
+							</div>
+						</div>
+					</ui:insert>
+				</div>
+				<!-- /.container-fluid -->
+				<footer class="footer text-center"> 2025 &copy; Sistema Cap Eva  </footer>
+			</div>
+		</div>
+		<custom:dialogSesionTimeout/>		
+	</f:view>
+
+
+
+
+	<h:outputScript library="js" name="tether.min.js" />
+	<h:outputScript library="js" name="bootstrap.min.js" />
+	<h:outputScript library="js" name="bootstrap-extension.min.js" />
+	<h:outputScript library="js" name="sidebar-nav.min.js" />
+	<h:outputScript library="js" name="jquery.slimscroll.js" />
+	<h:outputScript library="js" name="waves.js" />
+	<h:outputScript library="js" name="custom.min.js" />
+	<h:outputScript library="js" name="jQuery.style.switcher.js" />
+	<h:outputScript library="js" name="custom-select.min.js" />
+	<h:outputScript library="js" name="calendar.js" />
+	
+
+</h:body>
+</html>

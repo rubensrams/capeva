@@ -1,0 +1,73 @@
+<ui:composition xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:sec="http://www.springframework.org/security/tags"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	template="../sections/template.xhtml">
+
+	<ui:define name="contenido">
+		<div class="row bg-title">
+			<div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+				<ol class="breadcrumb">
+					<li><label>Planeacion</label></li>
+					<li class="active">POA</li>
+				</ol>
+			</div>
+			<!-- /.col-lg-12 -->
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="white-box">
+
+					<div class="titulo_seccion">Seleciona el anio y el archivo
+						para realizar la carga POA</div>
+					<p:spacer height="30px"></p:spacer>
+					<div class="alert alert-success titulo_bold">No se ha hecho
+						carga de archivo POA</div>
+
+					<h:form id="form" enctype="multipart/form-data">
+						<p:panel rendered="#{poaController.flagAnio}">
+							<table style="width: 50%;" border="0">
+								<tr>
+									<td width="50%">Selecciona el anio <p:selectOneMenu
+											value="#{poaController.anio}" styleClass="form-control">
+											<f:selectItem itemLabel="--SELECCIONA EL ANIO--"
+												itemValue="0" />
+											<f:selectItem itemLabel="2023" itemValue="2023" />
+											<f:selectItem itemLabel="2024" itemValue="2024" />
+											<f:selectItem itemLabel="2025" itemValue="2025" />
+										</p:selectOneMenu>
+									</td>
+								</tr>								
+							</table>
+							 <p:spacer height="90px"></p:spacer>
+							<p:commandButton  value="Continuar please" icon="pi pi-check" iconPos="right"
+                            action="#{poaController.seleccionAnio}" update="form" />
+						</p:panel>
+						
+                        <p:panel rendered="#{poaController.flagFile}">
+                            <table style="width: 50%;" border="0">                               
+                                <tr>
+                                    <td>Selecciona un archivo <p:fileUpload skinSimple="true"
+                                            mode="advanced" label="Seleccionar" uploadLabel="Subir excel"
+                                            cancelLabel="Cancelar" multiple="false" sizeLimit="1102400"
+                                            allowTypes="/(\.|\/)(txt|gif|jpe?g|png|xls|xlsx)$/"
+                                            invalidSizeMessage="El maximo peso del archivo es 1 MB"
+                                            invalidFileMessage="Solo archivos exceles son permitidos"
+                                            listener="#{poaController.eventoCarga}" /></td>
+                                </tr>
+                            </table>
+
+                        </p:panel>
+						
+
+					</h:form>
+
+					<p:spacer height="200px"></p:spacer>
+				</div>
+			</div>
+		</div>
+	</ui:define>
+
+
+</ui:composition>

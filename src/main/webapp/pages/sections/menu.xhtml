@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:sec="http://www.springframework.org/security/tags"
+	xmlns:c="http://java.sun.com/jstl/core"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	
+	>
+	<h:form id="menuForm">
+		<div class="navbar-default sidebar" role="navigation">
+
+			<div class="sidebar-nav navbar-collapse slimscrollsidebar">
+
+				<ul class="nav" id="side-menu">
+
+					<li class="sidebar-search hidden-sm hidden-md hidden-lg">
+						<!-- input-group -->
+						<div class="input-group custom-search-form">
+							<input type="text" class="form-control" placeholder="Search..." />
+							<span class="input-group-btn">
+								<button class="btn btn-default" type="button">
+									<i class="fa fa-search"></i>
+								</button>
+							</span>
+						</div> <!-- /input-group -->
+					</li>
+					<li class="user-pro"><a href="#" class="waves-effect"> 
+							<img
+							src="#{facesContext.externalContext.requestContextPath}/resources/css/plugins/images/perfil.png"
+							class="img-circle" alt="home" />
+								<span class="text_font_12a_BOLD">#{usuarioController.username}<span class="fa arrow"></span></span>
+							
+							</a>
+						<ul class="nav nav-second-level">
+							<li class="text_font_12_BOLD_BLUE_MENU">
+								<p:commandLink value="${msg.btn_logout}" styleClass="text_font_12_BOLD_BLUE_MENU"
+									action="#{indexController.closeSesion}" onclick="cleanLocalStorage()" ajax="false">
+									<i class="fa fa-power-off"></i>
+								</p:commandLink>								
+								</li>
+
+						</ul></li>
+
+                    
+                    <li><a href="#" onclick="asignaIdMenu(2)" class="waves-effect"><i data-icon=")"
+							class="ti-calendar p-r-10" style='color:#FA7335; font-size: 20px;'></i> <span class="hide-menu"><label
+								class="text_wine">${msg.planeacion_menu}</label><span class="fa arrow"></span></span></a>
+						<ul id="ulPlane" class="nav nav-second-level">
+							<li class="text_font_12_BOLD_BLUE_MENU"><p:commandLink id="pBPlane1" onclick="asignaSeleccion(21)" styleClass="text_font_12_BOLD_BLUE_MENU" value="${msg.planeacion_sub_carga}"
+									action="#{poaController.cargaPoa}" ajax="false" /></li>
+							<li class="text_font_12_BOLD_BLUE_MENU"><p:commandLink id="pBPlane2" onclick="asignaSeleccion(22)" styleClass="text_font_12_BOLD_BLUE_MENU" value="${msg.lici_preba_menu_pe}"
+								action="${listaPUnitariosPBController.consultaListado}" ajax="false" /></li>									
+						</ul>
+					</li>
+                    
+						
+				</ul>
+			</div>
+		</div>
+	</h:form>
+</ui:composition>
+

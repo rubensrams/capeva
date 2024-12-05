@@ -1,0 +1,631 @@
+.login-register_home {
+	background:
+		url("/Capeva/resources/css/plugins/images/login-register.png") no-repeat center center/cover !important;
+	height: 100%;
+	position: fixed
+}
+
+.boton_lg {
+	background: #183c59 !important;
+	border: 1px solid #183c59 !important;
+	width: 100%;
+	color: white;
+	font-weight: bold;
+	height: 40px;
+	font-size: 16px !important;
+}
+
+
+.heightTexbox {
+
+	height: 35px !important;
+	width: 100%;
+	border: 2px;
+	border-color: #183c59 !important;
+	font-size: 16px !important;
+}
+
+.text_font_15 {
+	font-size: 15px !important;
+}
+
+.text_font_13 {
+	font-size: 13px !important;
+	font-weight: bold;
+	color: rgb(45, 45, 45);
+}
+
+.text_font_11 {
+	font-size: 11px !important;
+	font-weight: 400;
+}
+
+.text_font_12 {
+	font-size: 12.5px !important;
+	font-weight: 400;
+}
+
+.text_font_12_BOLD {
+	font-size: 11px !important;
+	font-weight: bold;
+	color: #011e81;
+}
+
+.text_font_12a_BOLD {
+	font-size: 12px !important;
+	font-weight: bold;
+	color: #011e81;
+}
+
+.text_font_15_BOLD_BLUE {
+	font-size: 15px !important;
+	font-weight: bold;
+	color: #011e81;
+}
+
+.text_font_18_BOLD_BLUE {
+	font-size: 18px !important;
+	font-weight: bold;
+	color: #011e81;
+}
+
+.text_font_12_BOLD_WINE {
+	font-size: 12.5px !important;
+	font-weight: bold;
+	color: #183c59;
+}
+
+.text_font_13_BOLD_WINE {
+	font-size: 13px !important;
+	font-weight: bold;
+	color: #183c59;
+}
+
+.text_font_14_BOLD_WINE {
+	font-size: 14px !important;
+	font-weight: bold;
+	color: #183c59;
+}
+
+.text_font_15_BOLD_WINE {
+	font-size: 15px !important;
+	font-weight: bold;
+	color: #183c59;
+}
+
+.text_font_15_BOLD_ORANGE {
+	font-size: 15px !important;
+	font-weight: bold;
+	color: rgb(255, 128, 0);
+}
+
+.text_font_16_BOLD_WINE {
+	font-size: 16px !important;
+	font-weight: bold;
+	color: #183c59;
+}
+
+.text_font_18_BOLD_GREEN {
+	font-size: 18px !important;
+	font-weight: bold;
+	color: rgb(17, 136, 121);
+}
+
+.text_font_18_BOLD_BLUE_LIGHT {
+	font-size: 18px !important;
+	font-weight: bold;
+	color: rgb(16, 139, 222);
+}
+
+
+.text_font_18_BOLD_RED {
+	font-size: 18px !important;
+	font-weight: bold;
+	color: rgb(193, 0, 0);
+}
+
+.text_font_15_BOLD_GREEN {
+	font-size: 15px !important;
+	font-weight: bold;
+	color: rgb(17, 136, 121);
+}
+
+.text_font_15_BOLD_LIGHT_BLUE {
+	font-size: 15px !important;
+	font-weight: bold;
+	color: rgb(16, 139, 222);
+}
+
+.text_font_14_BOLD_LIGHT_BLUE {
+	font-size: 14px !important;
+	font-weight: bold;
+	color: rgb(16, 139, 222);
+}
+
+.text_font_14_BOLD_LIGHT_BLUE_LINK {
+	font-size: 14px !important;
+	font-weight: bold;
+	color: rgb(16, 139, 222);
+	cursor: pointer;
+	text-decoration: underline !important;
+}
+
+
+.text_font_09_BOLD {
+	font-size: 10px !important;
+	font-weight: bold;
+	color: rgb(104, 104, 104);
+}
+
+.text_font_13_BOLD {
+	font-size: 15px !important;
+	font-weight: bold;
+	color: rgb(60, 60, 60);
+}
+
+.text_font_14 {
+	font-size: 14px !important;
+	font-weight: 400;
+}
+.text_font_14_head {
+	font-size: 14px !important;
+	font-weight: bold
+}
+.text_font_14_BOLD {
+	font-size: 13px !important;
+	font-weight: bold;
+	color: #011e81;
+}
+.text_font_14_BOLD_OBRAS {
+	font-size: 11px !important;
+	font-weight: bold;
+	color: #011e81;
+}
+.text_font_14_BOLD_OBRAS_BLACK {
+	font-size: 11px !important;
+	font-weight: bold;
+	color: rgb(0, 0, 0);
+}
+.text_font_16_BOLD {
+	font-size: 16px !important;
+	font-weight: bold;
+	color: #011e81;
+}
+
+.text_font_12_BOLD_BLUE_bold {
+	font-size: 11px !important;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #011e81;
+	font-weight: bold;
+}
+
+.text_font_12_BOLD_BLUE {
+	font-size: 13px !important;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #011e81;
+}
+
+.titulo_seccion {
+	font-size: 15px !important;
+	font-weight: bold !important;
+	color: #011e81 !important;
+}
+
+.titulo_seccion_wine {
+	font-size: 15px !important;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold !important;
+	color: #183c59;
+}
+
+.titulo_bold {
+	font-family: Arial;
+	font-size: 15px !important;
+	font-weight: bold;
+}
+
+
+
+
+/*Estilos Select*/
+
+*.ui-selectonemenu {
+	vertical-align: middle !important;
+	border: 1px solid #ced4da !important;
+	position: relative !important;
+	transform: none !important;
+	padding: 0 !important;
+	transition: background-color .2s, color .2s, border-color .2s, box-shadow .2s, opacity .2s !important;
+	border-radius: 6px !important;
+	background: #ffffff !important;
+	height: 40px !important;
+	border-color: rgb(156, 179, 254) !important;
+}
+
+*.ui-selectonemenu .label.ui-selectonemenu-label {
+	cursor: pointer !important;
+}
+
+*.ui-selectonemenu .ui-selectonemenu-label {
+	background: transparent !important;
+	padding-right: 2.357rem !important;
+	font-size: 15px !important;
+}
+
+*.ui-selectonemenu .ui-selectonemenu-label {
+	display: block !important;
+	border: 0 !important;
+	white-space: nowrap !important;
+	overflow: hidden !important;
+	font-weight: normal !important;
+	width: 100% !important;
+	text-align: left !important;
+}
+
+*.ui-inputfield {
+	color: #495057 !important;
+	background: #fff !important;
+	padding: 0.5rem 0.5rem !important;
+	border: 1px solid #ced4da !important;
+	outline: 0 none !important;
+	font-size: 1rem !important;
+	border-radius: 4px !important;
+	transition: background-color .2s, color .2s, border-color .2s, box-shadow .2s, opacity .2s !important;
+	-webkit-appearance: none !important;
+	appearance: none !important;
+	border-color: rgb(156, 179, 254) !important;
+}
+
+*.ui-inputfield {
+	margin: 0 !important;
+	outline: medium none !important;
+	padding: 4px !important;
+	font-weight: normal !important;
+}
+
+*.ui-widget {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+	text-decoration: none !important;
+	font-size: 15px !important;
+}
+
+/*Estilos Datatable*/
+
+.ui-datatable th {
+	font-family: Arial;
+	font-size: 12px;
+	color: #183c59 !important;
+	background: rgb(234, 234, 234) !important;
+}
+
+
+.ui-datatable tr.ui-datatable-even:hover,
+.ui-datatable tr.ui-datatable-odd:hover {
+	background: rgb(251, 253, 255) !important;
+}
+
+.ui-paginator .ui-paginator-pages .ui-paginator-page {
+	padding: 0 !important;
+	border: 1px solid transparent !important;
+	text-align: center !important;
+	line-height: 2.286em !important;
+	min-width: 2.286em !important;
+	height: 2.286em !important;
+	color: #183c59 !important;
+	font-weight: bold !important;
+	margin: 0 0.125em !important;
+	border-radius: 4px !important;
+	transition: background-color .2s, color .2s, border-color .2s, box-shadow .2s, opacity .2s !important;
+}
+
+/*Boton*/
+.ui-button {
+	background: #183c59 !important;
+	color: #fff !important;
+	border: 1px solid rgb(255, 255, 255) !important;
+	outline: 0 none !important;
+	border-radius: 4px !important;
+	transition: background-color .2s, color .2s, border-color .2s, box-shadow .2s, opacity .2s !important;
+	font-weight: 500 !important;
+}
+
+
+.btn_view {
+	background: rgb(19, 104, 19) !important;
+
+}
+
+.btn_edit {
+	background: rgb(41, 166, 207) !important;
+
+}
+
+.btn_add {
+	background: rgb(187, 205, 27) !important;
+
+}
+
+.btn_upload {
+	background: rgb(247, 126, 17) !important;
+
+}
+
+.btn_detail {
+	background: rgb(0, 0, 128) !important;
+
+}
+
+.ui-message.ui-message-error,
+body .ui-message.ui-message-fatal {
+	background: none !important;
+	border: none !important;
+	border-width: 0px !important;
+
+}
+
+.ui-messages-error,
+.ui-message-error {
+	color: rgb(255, 0, 0) !important;
+	background-color: none !important;
+	border-color: none !important;
+	font-weight: bold;
+	font-size: 12px !important;
+}
+
+.error {
+	font-size: 12px !important;
+	font-weight: bold;
+	color: rgb(255, 0, 0) !important;
+}
+
+.logo_font {
+	font-weight: bold;
+	color: rgb(255, 255, 255) !important;
+
+}
+
+.size_text {
+	width: 300px !important;
+}
+
+.size_text_400 {
+	width: 400px !important;
+}
+
+.size_text2 {
+	width: 500px !important;
+}
+
+.text_Area_width {
+	width: 100% !important;
+}
+
+.text_Area_height {
+	height: 60px !important;
+}
+
+
+.text_Area_heightpor {
+	height: 120px !important;
+}
+
+.text_Area_heightpor250 {
+	height: 250px !important;
+}
+
+/*Estilos Grid no border*/
+
+.ui-panelgrid .ui-panelgrid-cell {
+	border-width: 0px !important;
+	border-style: none !important;
+	padding: 4px 10px !important;
+}
+
+.topdialog_margin {
+	margin-top: 30px !important;
+}
+
+.noHeader.ui-datatable table thead tr {
+	display: none !important;
+}
+
+.siHeader.ui-datatable table thead tr {
+	display: block !important;
+}
+
+.ui-panel .ui-panel-titlebar .ui-panel-titlebar-icon .ui-icon-plusthick:before {
+	font-size: 15px !important;
+	content: "" !important;
+	font-weight: bold !important;
+	color: #183c59 !important;
+}
+
+.ui-panel .ui-panel-titlebar {
+	border: 1px solid #dee2e6 !important;
+	background: rgb(227, 227, 227) !important;
+	color: #183c59 !important;
+	padding: 1rem !important;
+	font-weight: bold !important;
+	border-bottom-right-radius: 0 !important;
+	border-bottom-left-radius: 0 !important;
+	border-top-left-radius: 4px !important;
+	border-top-right-radius: 4px !important;
+}
+
+.ui-panel .ui-panel-titlebar .ui-panel-titlebar-icon .ui-icon-minusthick {
+	font-family: "primeicons" !important;
+	color: #183c59 !important;
+	font-weight: bold !important;
+	font-size: 15px !important;
+	display: inline-block !important;
+	background: none !important;
+}
+
+.tab {
+	border: none !important;
+
+}
+
+.headerTableCustom {
+	font-family: Arial !important;
+	font-weight: bold !important;
+	font-size: 12px !important;
+}
+
+.linkcomunObras {
+	font-size: 14px !important;
+	font-weight: bold;
+	color: #183c59 !important;
+	text-decoration: underline !important;
+
+}
+
+.linkcomun {
+	color: #183c59 !important;
+	font-weight: bold !important;
+	text-decoration: underline !important;
+}
+
+.color_wine {
+	color: #183c59 !important;
+	font-weight: bold !important;
+}
+
+.text_empty {
+	color: #183c59 !important;
+	font-weight: bold !important;
+}
+
+*.panelNoborder .ui-panel .ui-panel-content {
+	border: none !important;
+}
+
+
+.ui-dialog .ui-dialog-titlebar {
+	background: rgb(230, 230, 230) !important;
+}
+
+.ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-icon {
+	margin-top: -28px !important;
+}
+
+.ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-icon .ui-icon-closethick:before {
+	content: "" !important;
+	font-weight: bold !important;
+	font-size: 15px !important;
+	color: #183c59 !important;
+
+}
+
+
+.ui-selectoneradio label {
+	cursor: pointer !important;
+	display: inline-block !important;
+	margin: 0 16px 0 8px !important;
+	vertical-align: middle !important;
+	color: #011e81;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+hr {
+	border: none;
+	height: 1px;
+	color: rgb(191, 191, 191);
+	background-color: rgb(184, 184, 184) !important;
+}
+
+.margemsub {
+	
+	margin-left: 80px;;
+}
+
+.text_font_12_BOLD_BLUE_MENU {
+	font-size: 14px !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	color: #011e81 !important;
+}
+
+
+.text_font_12_BOLD_BLUE_MENU :hover {
+  color: rgb(40, 137, 225) !important;
+}
+
+.subrayado-menu{
+ text-decoration: underline !important;
+ color: rgb(40, 137, 225) !important;
+}
+
+
+.text_font_14_BOLD_GREEN_PB {
+	font-size: 13px !important;
+	font-weight: bold;
+	color: rgb(17, 100, 28);
+}
+
+.text_font_14_BOLD_BLUE_PB{
+	font-size: 13px !important;
+	font-weight: bold;
+ 
+  color: rgb(170, 170, 0) !important;
+}
+
+.text_font_14_BOLD_ORANGE_PB{
+	font-size: 13px !important;
+	font-weight: bold;
+ color: rgb(40, 137, 225) !important;
+}
+
+.text_font_14_BOLD_PURPLE_PB{
+	font-size: 13px !important;
+	font-weight: bold;
+ color: rgb(130, 104, 62) !important;
+}
+
+.text_font_11_BOLD {
+	font-size: 11px !important;
+	font-weight: bold;
+	color: #011e81;
+}
+
+
+
+.sub_total_text_font_14_BOLD_BLUE {
+	font-size: 14px !important;
+	font-weight: bold;
+	color: #011e81
+}
+
+.sub_total_text_font_14_BOLD_BLUE_LIGHT {
+	font-size: 14px !important;
+	font-weight: bold;
+ color: rgb(40, 137, 225) !important;
+}
+.sub_total_text_font_14_BOLD_BLUE_GREEN {
+	font-size: 14px !important;
+	font-weight: bold;
+	color: rgb(17, 100, 28);
+}
+.sub_total_text_font_14_BOLD_BLUE_GOLD {
+	font-size: 14px !important;
+	font-weight: bold;
+	color: rgb(170, 170, 0) !important;
+}
+.sub_total_text_font_14_BOLD_BLUE_ORANGE {
+	font-size: 14px !important;
+	font-weight: bold;
+color: rgb(130, 104, 62) !important;
+}
+ 
+ 
+.text_font_14_BOLD_PURPLE_PB_RED{
+	font-size: 13px !important;
+	font-weight: bold;
+ color: rgb(255, 0, 0) !important;
+}
+
+.text_font_11_BOLD_OBRAS_WINE_SEG {
+	font-size: 11px !important;
+	font-weight: bold;
+	color: #183c59;
+}

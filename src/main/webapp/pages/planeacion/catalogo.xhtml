@@ -1,0 +1,34 @@
+<ui:composition xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:sec="http://www.springframework.org/security/tags"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	template="../sections/template.xhtml">
+
+	<ui:define name="contenido">
+		<div class="row bg-title">
+			<div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+				<ol class="breadcrumb">
+					<li><label>Planeacion</label></li>
+					<li class="active">POA</li>
+				</ol>
+			</div>
+			<!-- /.col-lg-12 -->
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="white-box">
+
+					<h:form id="form">
+						<p:commandButton  value="Saludar" icon="pi pi-check" iconPos="right"
+                            action="#{catalogoController.saludos}" update="form" />
+					</h:form>
+
+					<p:spacer height="200px"></p:spacer>
+				</div>
+			</div>
+		</div>
+	</ui:define>
+
+
+</ui:composition>

@@ -1,0 +1,28 @@
+<ui:composition xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:sec="http://www.springframework.org/security/tags"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+>
+					<p:dialog  position="center, center"
+						hideEffect="fade" showEffect="fade" widgetVar="deleteMani"
+						modal="true"  width="600">
+						<f:facet name="header">
+							<div class="titulo_seccion">${msg.aclara_config_mun_manifestacion_del}</div>
+						</f:facet>
+						<h:form id="mainDeleteMani">
+						<p:spacer height="20px"></p:spacer>
+							<p:panel>
+				 				<LABEL class="text_font_13_BOLD">${msg.aclara_config_mun_manifestacion_del_qauest} <span class="text_font_12_BOLD_WINE">#{configActaAclaracionesController.rowSelected.numero}</span>?</LABEL>
+				 				<br/>
+				 					<p:spacer height="90px"></p:spacer>
+				 				<p:commandButton icon="pi pi-times" 
+									value="${msg.conc_elimi}"
+									action="#{configActaAclaracionesController.eliminarMani}"
+								>
+								</p:commandButton> 							
+							</p:panel>
+						</h:form>
+					</p:dialog>
+					
+</ui:composition>

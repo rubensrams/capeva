@@ -1,0 +1,70 @@
+<ui:composition xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:sec="http://www.springframework.org/security/tags"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+>
+		
+			<p:dialog  height="450px" width="70%" position="center, center"
+						hideEffect="fade" showEffect="fade" widgetVar="manifestDialog" resizable="false"
+						modal="true">			
+						<f:facet name="header">
+							<div class="titulo_seccion">${msg.aclara_config_mun_manifes}</div>
+						</f:facet>
+						<h:form id="formManiDialog">
+										
+							<p:spacer height="50px"></p:spacer>
+							<p:panel>
+							
+										<table border="0" width="100%">
+												<tr>
+													<td width="15%" align="left" valign="middle">
+													<p:spacer height="8px"></p:spacer>
+														<div style="color:black; font-weight: bold; font-size: 12px;">${msg.aclara_config_mun_numero}</div>
+													</td>
+													<td width="40%" align="left">
+													<p:spacer height="8px"></p:spacer>
+														<p:inputText id="numTxt" required="true" size="10"
+															requiredMessage="${msg.aclara_config_mun_numero_err}"
+															value="#{configActaAclaracionesController.numero}"
+															>
+															 <p:keyFilter mask="num" />	
+														</p:inputText>
+														<p:message  for="numTxt" display="text" />	
+													</td>
+												</tr>
+												<tr>
+													<td width="7%" align="left" valign="middle">
+													<p:spacer height="8px"></p:spacer>
+														<div style="color:black; font-weight: bold; font-size: 12px;">${msg.aclara_config_mun_manifestacion}</div>
+													</td>
+													<td width="40%" align="left">
+													<p:spacer height="8px"></p:spacer>
+														<p:inputTextarea
+															id="respuestaTxt" 
+															styleClass="text_Area_width text_Area_heightpor"
+															required="true"
+															requiredMessage="${msg.aclara_config_mun_manifestacion_err}"
+															value="#{configActaAclaracionesController.manifestacion}"
+															/>
+														<p:message  for="respuestaTxt" display="text" />	
+													</td>
+												</tr>
+										</table>
+										
+										<p:spacer height="100px"></p:spacer>
+						 				<p:commandButton styleClass="boton"
+						 							icon="pi pi-save"
+													value="Registrar"
+													action ="#{configActaAclaracionesController.generaManifestacion}"
+													update="formManiDialog"
+													 />
+									</p:panel>
+							</h:form>
+
+
+
+					</p:dialog>
+					
+					
+</ui:composition>
