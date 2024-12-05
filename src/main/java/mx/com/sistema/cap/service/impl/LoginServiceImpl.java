@@ -3,7 +3,6 @@ package mx.com.sistema.cap.service.impl;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.faces.context.FacesContext;
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.logging.log4j.LogManager;
@@ -22,7 +21,6 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 import mx.com.sistema.cap.constantes.Constantes;
 import mx.com.sistema.cap.dao.IUsuarioDAO;
 import mx.com.sistema.cap.dto.UsuarioDTO;
-import mx.com.sistema.cap.entity.RolEntity;
 import mx.com.sistema.cap.entity.UsuarioEntity;
 
 

@@ -34,6 +34,13 @@
 			<redirect />
 		</navigation-case>
 		
+		<navigation-case>
+			<from-outcome>cargas</from-outcome>
+			<to-view-id>/pages/principal/cargas.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+		
+		
 	</navigation-rule>
 	
 

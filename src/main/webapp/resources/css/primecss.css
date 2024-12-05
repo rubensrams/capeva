@@ -182,7 +182,7 @@
 	color: #011e81;
 }
 .text_font_14_BOLD_OBRAS_BLACK {
-	font-size: 11px !important;
+	font-size: 13px !important;
 	font-weight: bold;
 	color: rgb(0, 0, 0);
 }
@@ -543,7 +543,7 @@ hr {
 .text_font_12_BOLD_BLUE_MENU {
 	font-size: 14px !important;
 	font-family: Arial, Helvetica, sans-serif !important;
-	color: #011e81 !important;
+	color: rgb(0, 0, 0) !important;
 }
 
 
