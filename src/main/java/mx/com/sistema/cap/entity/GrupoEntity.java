@@ -4,9 +4,12 @@ import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 
@@ -32,7 +35,9 @@ public class GrupoEntity implements Serializable {
 	private int estatus;
 	
 	
-	
+	@OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_licenciatura", nullable = false, insertable = false, updatable = false)
+    private LicienciaturaEntity licenciatura;
 	
 	public GrupoEntity() {
 
@@ -48,10 +53,29 @@ public class GrupoEntity implements Serializable {
 		this.estatus = estatus;
 	}
 
+	public GrupoEntity(Long id) {
+		this.id = id;
+	}
+
 	
 	
 	
-	
+	public LicienciaturaEntity getLicenciatura() {
+		return licenciatura;
+	}
+
+
+
+
+
+	public void setLicenciatura(LicienciaturaEntity licenciatura) {
+		this.licenciatura = licenciatura;
+	}
+
+
+
+
+
 	public int getEstatus() {
 		return estatus;
 	}

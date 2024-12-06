@@ -192,6 +192,11 @@ function asignaIdMenu(id){
 
 }
 
+function asignaSeleccionExt(id){
+	 asignaIdMenu(3);
+	 localStorage.setItem('idSelBRA', id);
+}
+
 function asignaSeleccion(id){
 	 localStorage.setItem('idSelBRA', id);
 }

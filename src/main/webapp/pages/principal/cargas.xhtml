@@ -21,54 +21,63 @@
 
 					<div class="titulo_seccion">Seleciona los siguientes datos</div>
 					<p:spacer height="30px"></p:spacer>
-
-					<h:form id="mainForm" enctype="multipart/form-data">
-					<p:growl id="growl" showDetail="true" />
-							<table style="width: 50%;" border="0"  cellpadding="90">
-								<tr>
-									<td width="50%"><label class="text_font_14_BOLD_OBRAS_BLACK">Selecciona el grupo</label>
+					<p:panel>
+						<h:form id="mainForm" enctype="multipart/form-data">
+						<p:growl id="growl" showDetail="true" />
+								<table style="width: 50%;" border="0"  cellpadding="90">
+									<tr>
+										<td width="50%"><label class="text_font_14_BOLD_OBRAS_BLACK">Selecciona el grupo</label>
+												
+											<p:selectOneMenu styleClass="form-control" style="height:30px !important;" 
+											id="grupoId" value="#{cargaController.grupo}" 
+											requiredMessage="${msg.lici_anio_error}">
+														<f:selectItem itemLabel="--SELECCIONA--"
+															noSelectionOption="true" />
+													<f:selectItems value="#{cargaController.listaGrupos}" var="grupo"
+					                               itemValue="#{grupo.id}"
+					                               itemLabel="#{grupo.numero} - #{grupo.licenciatura}"/>
+										</p:selectOneMenu>
 											
-										<p:selectOneMenu styleClass="form-control" style="height:30px !important;" 
-										id="tipoArchivo" required="true" value="#{cargaController.grupo}" 
-										requiredMessage="${msg.lici_anio_error}">
-													<f:selectItem itemLabel="--SELECCIONA--"
-														noSelectionOption="true" />
-												<f:selectItems value="#{cargaController.listaGrupos}" var="grupo"
-				                               itemValue="#{grupo.id}"
-				                               itemLabel="#{grupo.numero}"/>
-									</p:selectOneMenu>
-										
-										<p:spacer height="40px"></p:spacer>
-									</td>
-								</tr>		
-								
-								<tr>
-								
-									<td width="50%"><label class="text_font_14_BOLD_OBRAS_BLACK">Selecciona el año</label>
-										
-										
-										<p:spacer height="40px"></p:spacer>
-									</td>
-								</tr>		
-														
-							</table>
-							 <p:spacer height="40px"></p:spacer>
-
-                            <table style="width: 50%;" border="0">                               
-                                <tr>
-                                    <td><label class="text_font_14_BOLD_OBRAS_BLACK">Selecciona un archivo </label><p:fileUpload skinSimple="true"
-                                            mode="advanced" label="Seleccionar" uploadLabel="Subir archivo"
-                                            cancelLabel="Cancelar" multiple="false" sizeLimit="30204800"
-                                            allowTypes="/(\.|\/)(mp4|doc|docx|pdf|txt|gif|jpeg|png|xls|xlsx)$/"
-                                            invalidSizeMessage="El maximo peso del archivo es 30 MB"
-                                            invalidFileMessage="Archivo no permitido"
-                                            listener="#{cargaController.eventoCarga}" /></td>
-                                </tr>
-                            </table>
-
-						
-
-					</h:form>
+											<p:spacer height="40px"></p:spacer>
+										</td>
+									</tr>		
+									
+									<tr>
+									
+										<td width="50%"><label class="text_font_14_BOLD_OBRAS_BLACK">Selecciona el tipo de documento</label>
+											<p:selectOneMenu styleClass="form-control" style="height:30px !important;" 
+											id="archivoId"  value="#{cargaController.tipoA}" 
+											requiredMessage="${msg.lici_anio_error}">
+														<f:selectItem itemLabel="--SELECCIONA--"
+															itemValue="" />
+													<f:selectItems value="#{cargaController.tipoArchivo}" var="tipo"
+					                               itemValue="#{tipo}"
+					                               itemLabel="#{tipo}"/>
+										</p:selectOneMenu>
+											
+											<p:spacer height="40px"></p:spacer>
+										</td>
+									</tr>	
+									
+									<tr>
+									
+										<td width="50%">								
+									
+											 <p:commandButton styleClass="boton" icon="pi pi-arrow-circle-left"
+									 			value="Continuar" 
+												action="#{cargaController.envioCarga}"
+												>
+												</p:commandButton>
+											</td>
+									</tr>	
+												
+															
+								</table>
+								 <p:spacer height="40px"></p:spacer>
+	
+	                          
+						</h:form>
+					</p:panel>
 
 					<p:spacer height="200px"></p:spacer>
 				</div>

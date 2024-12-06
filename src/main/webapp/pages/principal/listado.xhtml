@@ -1,0 +1,107 @@
+<ui:composition xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:sec="http://www.springframework.org/security/tags"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:custom="http://codirac/custom-tags"
+	template="../sections/template.xhtml"
+	>
+	
+
+	<ui:define name="contenido">
+		<div class="row bg-title">
+			<div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+				<ol class="breadcrumb">
+					<li class="active">${msg.menu_consultas}</li>
+				</ol>
+			</div>
+			<!-- /.col-lg-12 -->
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="white-box">
+					<h:form id="mainFormList">
+						<p:growl id="growl" showDetail="true"/>
+						<p:panel id="panelListado">
+							<div class="titulo_seccion">Listado de archivos</div>
+							
+								<p:dataTable id="idList" var="row" 
+									value="#{listaArchivosEvaController.listaArchivosEvaDTO}"
+									emptyMessage="No se encontraron archivos cargados"
+									rowIndexVar="indexPartida"
+									rowKey="indexPartida"
+									paginator="true" rows="5"
+									paginatorPosition="top"
+									>
+									
+									<p:column headerText="ID" style="text-align: left; color:#800000 !important;" width="3%" >
+											<h:outputText styleClass="text_font_14_BOLD_OBRAS" value="#{row.id}" >
+										</h:outputText>
+										</p:column>
+														
+										<p:column headerText="NOMBRE" style="text-align: left; color:#800000 !important;" width="15%" >
+											<h:outputText styleClass="text_font_14_BOLD_OBRAS" value="#{row.nombre}" >
+										</h:outputText>
+										</p:column>
+		
+										<p:column headerText="TIPO" style="text-align: center; color:#800000 !important;" width="5%" >
+											<h:outputText styleClass="text_font_14_BOLD_OBRAS" value="#{row.tipoDocumento}" >
+											</h:outputText>
+										</p:column>
+										
+										
+										<p:column headerText="GRUPO" style="text-align: center; color:#800000 !important;" width="8%" >
+											<h:outputText styleClass="text_font_14_BOLD_OBRAS" value="#{row.grupo}" >
+											</h:outputText>
+										</p:column>
+										
+										
+										<p:column headerText="LICENCIATURA" style="text-align: center; color:#800000 !important;" width="25%" >
+											<h:outputText styleClass="text_font_14_BOLD_OBRAS" value="#{row.licienciatura}" >
+											</h:outputText>
+										</p:column>
+
+										<p:column headerText="FECHA DE CARGA" style="text-align: center; color:#800000 !important;" width="8%" >
+											<h:outputText styleClass="text_font_14_BOLD_OBRAS" value="#{row.fechaCarga}" >
+												<f:convertDateTime pattern="dd/MM/yyyy" />
+											</h:outputText>
+										</p:column>
+										
+										
+										<p:column headerText="ACCIÓNES" style="text-align: right; color:#800000 !important;" width="10%">
+											<p:commandLink 
+												title="Descargar"
+												ajax="false"
+												action="#{listaArchivosEvaController.openConvenio}"
+												target="_blank"
+												>
+												<f:setPropertyActionListener value="#{row}"
+													target="#{listaArchivosEvaController.rowSelected}" />
+												<h:graphicImage width="18" height="18" value="/resources/css/plugins/images/icondownload.png" />
+											</p:commandLink>&#160;&#160;
+											<p:commandLink 
+												title="Eliminar Convenio" 
+												onsuccess="PF('deleteConvenio').show()"
+												
+												>
+												<f:setPropertyActionListener value="#{row}"
+													target="#{listaArchivosEvaController.rowSelected}" />
+												<h:graphicImage width="26" height="26" value="/resources/css/plugins/images/icon_del.png" />
+											</p:commandLink>
+											</p:column>
+										
+								</p:dataTable>
+								
+							
+							
+						</p:panel>
+
+					</h:form>
+				
+				</div>
+			</div>
+		</div>
+	</ui:define>
+
+
+</ui:composition>

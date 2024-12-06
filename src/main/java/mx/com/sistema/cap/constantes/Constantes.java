@@ -51,6 +51,15 @@ public class Constantes {
 		return years;
 	}
 	
+	
+	public static List<String> tipoArchivo() {
+
+		List<String> archivos = new ArrayList<String>();
+		archivos.add("VIDEO");
+		archivos.add("DOCUMENTO");
+		
+		return archivos;
+	}
 
 	
 	}

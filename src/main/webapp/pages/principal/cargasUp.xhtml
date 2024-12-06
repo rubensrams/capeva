@@ -1,0 +1,115 @@
+<ui:composition xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:sec="http://www.springframework.org/security/tags"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	template="../sections/template.xhtml">
+
+	<ui:define name="contenido">
+		<div class="row bg-title">
+			<div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+				<ol class="breadcrumb">
+					<li><label>${msg.menu}</label></li>
+					<li class="active">${msg.menu_cargas}</li>
+				</ol>
+			</div>
+			<!-- /.col-lg-12 -->
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="white-box">									
+				<h:form id="mainForm" enctype="multipart/form-data">
+				<p:growl id="growl" showDetail="true" />
+				<table border="0" width="100%">
+									<tr >
+											<td height="30" align="right">
+											</td>
+											<td height="30" align="right">
+											 <p:commandButton styleClass="boton" icon="pi pi-arrow-circle-left"
+									 			value="${msg.msg_btn_regresar}" 
+												action="volver"
+												ajax="false">
+												</p:commandButton>
+											</td>
+									</tr>		
+								</table>
+						<p:spacer height="10px"></p:spacer>
+						<p:panel rendered="#{cargaUploadController.cargaFlag}">
+						<div class="titulo_seccion">
+						<h:outputText rendered="#{cargaUploadController.videoUp}" value="Seleciona el video a subir" />
+						<h:outputText rendered="#{cargaUploadController.doctoUp}" value="Seleciona el archivo a subir" />
+	                                    
+						</div>
+						<p:spacer height="30px"></p:spacer>
+							
+	
+	                            <table style="width: 50%;" border="0">                               
+	                                <tr>
+	                                    <td>
+	                                    	<h:outputText rendered="#{cargaUploadController.videoUp}" styleClass="text_font_14_BOLD_OBRAS_BLACK" value="Selecciona un VIDEO" />
+	                                    	<h:outputText rendered="#{cargaUploadController.doctoUp}" styleClass="text_font_14_BOLD_OBRAS_BLACK" value="Selecciona un ARCHIVO" />
+	                                    
+	                                    
+	                                    <p:fileUpload skinSimple="true"
+	                                    		rendered="#{cargaUploadController.videoUp}"
+	                                            mode="advanced" label="Seleccionar" uploadLabel="Subir archivo"
+	                                            cancelLabel="Cancelar" multiple="false" sizeLimit="30204800"
+	                                            allowTypes="/(\.|\/)(mp4|mp3)$/"
+	                                            invalidSizeMessage="El maximo peso del archivo es 30 MB"
+	                                            invalidFileMessage="Solo archivo de tipo video son validos"
+	                                            listener="#{cargaUploadController.eventoCarga}" />
+	                                            
+	                                            
+	                                     <p:fileUpload skinSimple="true"
+	                                     		rendered="#{cargaUploadController.doctoUp}"
+	                                            mode="advanced" label="Seleccionar" uploadLabel="Subir archivo"
+	                                            cancelLabel="Cancelar" multiple="false" sizeLimit="30204800"
+	                                            allowTypes="/(\.|\/)(doc|docx|pdf|txt|gif|jpeg|png|xls|xlsx)$/"
+	                                            invalidSizeMessage="El maximo peso del archivo es 30 MB"
+	                                            invalidFileMessage="Formato de archivo no valido"
+	                                            listener="#{cargaUploadController.eventoCarga}" />       
+	                                            
+	                                    </td>
+	                                </tr>
+	                                
+	                                
+	                                
+	                            </table>
+	
+							</p:panel>
+							
+							<p:panel rendered="#{cargaUploadController.listadoFlag}">
+						
+						
+						<p:commandButton id="pBLici2" onclick="asignaSeleccionExt(32)" styleClass="boton" icon="pi pi-arrow-circle-left"
+								rendered="#{cargaUploadController.videoUp}"
+								value="Ir al listado de videos"
+								action="listado" ajax="false" actionListener="#{listaArchivosEvaController.ejectListado}">
+								<f:param name = "tipoArchivo" value = "VIDEO" />
+						</p:commandButton>
+
+						<p:commandButton id="pBLici1" onclick="asignaSeleccionExt(31)" styleClass="boton" icon="pi pi-arrow-circle-left"
+								rendered="#{cargaUploadController.doctoUp}"
+								value="Ir al listado de documentos"
+								action="listado" ajax="false" actionListener="#{listaArchivosEvaController.ejectListado}">
+								<f:param name = "tipoArchivo" value = "DOCUMENTO" />
+						</p:commandButton>
+											
+						</p:panel>
+	
+						</h:form>
+					
+					
+						
+						
+						
+						
+
+					<p:spacer height="200px"></p:spacer>
+				</div>
+			</div>
+		</div>
+	</ui:define>
+
+
+</ui:composition>

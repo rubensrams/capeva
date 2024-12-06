@@ -7,6 +7,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import mx.com.sistema.cap.constantes.Constantes;
 import mx.com.sistema.cap.dao.IGruposDAO;
@@ -28,6 +29,7 @@ public class GruposServiceImpl implements IGrupoService {
 	
 
 	@Override
+	@Transactional(readOnly = true)
 	public List<GruposDTO> listadoGrupo() throws ServiceException {
 		
 	try {
@@ -36,7 +38,7 @@ public class GruposServiceImpl implements IGrupoService {
 		List<GruposDTO> gruposDTO = new ArrayList<>(); 
 		
 		gruposBD.stream().forEach((p)-> {
-			gruposDTO.add(new GruposDTO(p.getId(), p.getNumero(), p.getEstatus()));
+			gruposDTO.add(new GruposDTO(p.getId(), p.getNumero(), p.getEstatus(), p.getLicenciatura().getNombre()));
 		});		
 		
 		return gruposDTO;

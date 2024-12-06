@@ -40,6 +40,17 @@
 			<redirect />
 		</navigation-case>
 		
+		<navigation-case>
+			<from-outcome>cargasUp</from-outcome>
+			<to-view-id>/pages/principal/cargasUp.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+		
+		<navigation-case>
+			<from-outcome>listado</from-outcome>
+			<to-view-id>/pages/principal/listado.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
 		
 	</navigation-rule>
 	

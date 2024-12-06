@@ -51,12 +51,34 @@
 								class="text_wine">${msg.menu}</label><span class="fa arrow"></span></span></a>
 						<ul id="ulPlane" class="nav nav-second-level">
 							<li class="text_font_12_BOLD_BLUE_MENU"><p:commandLink id="pBPlane1" onclick="asignaSeleccion(21)" styleClass="text_font_12_BOLD_BLUE_MENU" value="${msg.menu_cargas}"
-									action="cargas" ajax="false" /></li>
-							<li class="text_font_12_BOLD_BLUE_MENU"><p:commandLink id="pBPlane2" onclick="asignaSeleccion(22)" styleClass="text_font_12_BOLD_BLUE_MENU" value="${msg.menu_consultas}"
-								action="${listaPUnitariosPBController.consultaListado}" ajax="false" /></li>									
+									action="cargas" ajax="false" actionListener="#{cargaController.clean}"/></li>
+																
+						</ul>
+
+					</li>
+					
+					
+					<li ><a href="#" class="" onclick="asignaIdMenu(3)"><i data-icon=")" aria-hidden="true"
+							class="fa fa-gavel p-r-10" style='color:#280b8e; font-size: 20px;'></i> <span class="hide-menu"><label
+								class="text_wine">${msg.menu_consultas}</label><span class="fa arrow"></span></span></a>
+						<ul id="ulLici" class="nav nav-second-level">
+							<li class="text_font_12_BOLD_BLUE_MENU">
+									<p:commandLink id="pBLici1" onclick="asignaSeleccion(31)" styleClass="text_font_12_BOLD_BLUE_MENU" value="${msg.menu_consultas_documentos}"
+									action="listado" ajax="false" actionListener="#{listaArchivosEvaController.ejectListado}"
+									>
+									<f:param name = "tipoArchivo" value = "DOCUMENTO" />
+									</p:commandLink>
+									</li>
+								<li class="text_font_12_BOLD_BLUE_MENU">
+								<p:commandLink id="pBLici2" onclick="asignaSeleccion(32)" styleClass="text_font_12_BOLD_BLUE_MENU" value="${msg.menu_consultas_videos}"
+								action="listado" ajax="false" actionListener="#{listaArchivosEvaController.ejectListado}">
+								<f:param name = "tipoArchivo" value = "VIDEO" />
+								</p:commandLink>
+								
+								</li>
+								
 						</ul>
 					</li>
-                    
 						
 				</ul>
 			</div>

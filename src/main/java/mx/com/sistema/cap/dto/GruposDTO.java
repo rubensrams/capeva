@@ -11,17 +11,39 @@ public class GruposDTO implements Serializable{
 	private Long id;
 	private String numero;
 	private int estatus;
+	private String licenciatura;
 	
 	
 	
 	
 	
-	
-	public GruposDTO(Long id, String numero, int estatus) {
+	public GruposDTO(Long id, String numero, int estatus, String licenciatura) {
 		this.id = id;
 		this.numero = numero;
 		this.estatus = estatus;
+		this.licenciatura=licenciatura;
 	}
+	
+	
+	
+	
+	
+	public String getLicenciatura() {
+		return licenciatura;
+	}
+
+
+
+
+
+	public void setLicenciatura(String licenciatura) {
+		this.licenciatura = licenciatura;
+	}
+
+
+
+
+
 	public Long getId() {
 		return id;
 	}
