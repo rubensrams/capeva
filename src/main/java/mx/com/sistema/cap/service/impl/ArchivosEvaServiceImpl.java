@@ -52,6 +52,7 @@ public class ArchivosEvaServiceImpl implements IArchivosEvaService {
 
 
 	@Override
+	@Transactional()
 	public void createArchivoEva(ArchivosEvaDTO archivosEvaDTO) throws ServiceException {
 			
 		try {
@@ -73,5 +74,22 @@ public class ArchivosEvaServiceImpl implements IArchivosEvaService {
 		
 	}
 
+	
+	
+	@Override
+	@Transactional()
+	public void deleteArchivoEva(ArchivosEvaDTO archivosEvaDTO) throws ServiceException {
+			
+		try {			
+			archivosEvaDAO.deleteById(archivosEvaDTO.getId());
+			LOGGER.info("Archivo eva: {}, guardado exitosamente ", archivosEvaDTO.getNombre());
+		}catch(Exception e) {	
+			e.printStackTrace();
+			 LOGGER.error("Ocurrio un error al crear archivo eva", e);
+			 throw new ServiceException();
+		 }
+
+		
+	}
 
 }

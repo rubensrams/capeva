@@ -11,6 +11,6 @@ public interface IArchivosEvaService {
 	
 	
 	List<ArchivosEvaDTO> listadoArchivosEva(String tipoDoc) throws ServiceException;
-	
+	void deleteArchivoEva(ArchivosEvaDTO archivosEvaDTO) throws ServiceException;
 	
 }

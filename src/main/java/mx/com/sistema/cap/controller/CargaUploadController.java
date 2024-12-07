@@ -5,6 +5,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.Random;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
@@ -46,6 +47,10 @@ public class CargaUploadController extends MainController implements Serializabl
 	
 	@Value("${ruta.carga.documentos}")
 	private String RUTA_CARGA_DOCUMENTOS;
+	
+	@Value("${url.app.descargas}")
+	private String URL_APP_DESCARGAS;
+ 
 
 	@Autowired
 	private transient IArchivosEvaService archivosEvaService;
@@ -106,16 +111,30 @@ public class CargaUploadController extends MainController implements Serializabl
 			uploadedFile = e.getFile();
 			File file = new File(uploadedFile.getFileName());
 			//String nomDoc= uploadedFile.getFileName()+System.currentTimeMillis();
-			//File fileWithNewName = new File(file.getParent(), nomDoc);
-			String pathFile="";
 			
+			String pathFile="";
+			String url = "";
+			String nombreArchivo="";
+			File fileWithNewName = null;
 			if(tipoA.equals("DOCUMENTO")) {
-				pathFile= RUTA_CARGA_DOCUMENTOS+file;
+				nombreArchivo=identificador()+"-"+uploadedFile.getFileName();
+				fileWithNewName = new File(file.getParent(), nombreArchivo);
+
+				pathFile= RUTA_CARGA_DOCUMENTOS+fileWithNewName;
+				
+				url= URL_APP_DESCARGAS+"documentos/"+nombreArchivo;
 				
 			}else {
-				pathFile= RUTA_CARGA_VIDEOS+file;
+				nombreArchivo=identificador()+"-"+uploadedFile.getFileName();
+				fileWithNewName = new File(file.getParent(), nombreArchivo);
+				pathFile= RUTA_CARGA_VIDEOS+fileWithNewName;
+				
+				url= URL_APP_DESCARGAS+"videos/"+nombreArchivo;
 			}			
-			archivosEvaService.createArchivoEva(new ArchivosEvaDTO(uploadedFile.getFileName(), tipoA, "http:google", new Date(), Constantes.ACTIVACION, grupo));
+			
+			
+			
+			archivosEvaService.createArchivoEva(new ArchivosEvaDTO(nombreArchivo, tipoA, url, new Date(), Constantes.ACTIVACION, grupo));
 			FileOutputStream fi = new FileOutputStream(pathFile);
 			fi.write(uploadedFile.getContent());
 			fi.flush();
@@ -134,6 +153,14 @@ public class CargaUploadController extends MainController implements Serializabl
 
 	}
 		
+	
+	private int identificador() {
+		Random random = new Random();
+		return random.nextInt(1000 - 1 + 1) + 1;
+		
+	}
+	
+	
 
 
 	private void actualizaForma() {

@@ -132,7 +132,16 @@ public class ArchivosEvaDTO implements Serializable {
 	}
 
 	
-		
+	
+	@Override
+	public String toString() {
+		return "ArchivosEvaDTO [id=" + id + ", nombre=" + nombre + ", tipoDocumento=" + tipoDocumento + ", url=" + url
+				+ ", fechaCarga=" + fechaCarga + ", estatus=" + estatus + ", grupo=" + grupo + ", licienciatura="
+				+ licienciatura + "]";
+	}
+
+	
+	
 	
 
 	

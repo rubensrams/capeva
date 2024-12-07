@@ -54,7 +54,7 @@
 	                                    		rendered="#{cargaUploadController.videoUp}"
 	                                            mode="advanced" label="Seleccionar" uploadLabel="Subir archivo"
 	                                            cancelLabel="Cancelar" multiple="false" sizeLimit="30204800"
-	                                            allowTypes="/(\.|\/)(mp4|mp3)$/"
+	                                            allowTypes="/(\.|\/)(mp4|mp3|mov|mpeg|avi|wmv)$/"
 	                                            invalidSizeMessage="El maximo peso del archivo es 30 MB"
 	                                            invalidFileMessage="Solo archivo de tipo video son validos"
 	                                            listener="#{cargaUploadController.eventoCarga}" />
@@ -64,7 +64,7 @@
 	                                     		rendered="#{cargaUploadController.doctoUp}"
 	                                            mode="advanced" label="Seleccionar" uploadLabel="Subir archivo"
 	                                            cancelLabel="Cancelar" multiple="false" sizeLimit="30204800"
-	                                            allowTypes="/(\.|\/)(doc|docx|pdf|txt|gif|jpeg|png|xls|xlsx)$/"
+	                                            allowTypes="/(\.|\/)(jpg|rar|zip|doc|docx|pdf|txt|gif|jpeg|png|xls|xlsx)$/"
 	                                            invalidSizeMessage="El maximo peso del archivo es 30 MB"
 	                                            invalidFileMessage="Formato de archivo no valido"
 	                                            listener="#{cargaUploadController.eventoCarga}" />       
