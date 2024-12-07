@@ -2,8 +2,6 @@ package mx.com.sistema.cap;
 
 import javax.faces.webapp.FacesServlet;
 import javax.servlet.DispatcherType;
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -44,6 +42,7 @@ public class CapEvaApplication extends SpringBootServletInitializer{
 	        servletContext.setInitParameter("primefaces.FONT_AWESOME", Boolean.TRUE.toString());
 	        servletContext.setInitParameter("javax.faces.ENABLE_CDI_RESOLVER_CHAIN", Boolean.TRUE.toString());
 	        servletContext.setInitParameter("primefaces.UPLOADER", "commons");
+	        servletContext.setInitParameter("javax.faces.PROJECT_STAGE", "Production");
 	        servletContext.setInitParameter("javax.faces.STATE_SAVING_METHOD", "client");
 	        servletContext.setInitParameter("javax.faces.DATETIMECONVERTER_DEFAULT_TIMEZONE_IS_SYSTEM_TIMEZONE", Boolean.TRUE.toString());
 	        servletContext.setInitParameter("javax.faces.FACELETS_LIBRARIES", "/WEB-INF/custom-taglib.xml");
