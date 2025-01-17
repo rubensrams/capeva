@@ -39,16 +39,10 @@
 										</h:outputText>
 										</p:column>
 														
-										<p:column headerText="NOMBRE" style="text-align: left; color:#800000 !important;" width="15%" sortBy="#{row.nombre}" filterBy="#{row.nombre}" filterMatchMode="contains">
-											<h:outputText styleClass="text_font_14_BOLD_OBRAS" value="#{row.nombre}" >
+										<p:column headerText="NOMBRE" style="text-align: left; color:#800000 !important;" width="35%" sortBy="#{row.nombre}" filterBy="#{row.nombre}" filterMatchMode="contains">
+											<h:outputText styleClass="text_font_10_BOLD_OBRAS" value="#{row.nombre}" >
 										</h:outputText>
 										</p:column>
-		
-										<p:column headerText="TIPO" style="text-align: center; color:#800000 !important;" width="5%" >
-											<h:outputText styleClass="text_font_14_BOLD_OBRAS" value="#{row.tipoDocumento}" >
-											</h:outputText>
-										</p:column>
-										
 										
 										<p:column headerText="GRUPO" style="text-align: center; color:#800000 !important;" width="8%" sortBy="#{row.grupo}" filterBy="#{row.grupo}" filterMatchMode="contains">
 											<h:outputText styleClass="text_font_14_BOLD_OBRAS" value="#{row.grupo}" >
@@ -61,14 +55,14 @@
 											</h:outputText>
 										</p:column>
 
-										<p:column headerText="FECHA DE CARGA" style="text-align: center; color:#800000 !important;" width="8%" >
+										<p:column headerText="FECHA CARGA" style="text-align: center; color:#800000 !important;" width="4%" >
 											<h:outputText styleClass="text_font_14_BOLD_OBRAS" value="#{row.fechaCarga}" >
 												<f:convertDateTime pattern="dd/MM/yyyy" />
 											</h:outputText>
 										</p:column>
 										
 										
-										<p:column headerText="ACCIÓNES" style="text-align: right; color:#800000 !important;" width="10%">
+										<p:column headerText="ACCIÓNES" style="text-align: right; color:#800000 !important;" width="5%">
 											<a href="#{row.url}"
 												title="Descargar"
 												target="_blank"												
